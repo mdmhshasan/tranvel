@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			body{
+				justify-content: center;
+				align-items: center;
+				min-height: 100vh;
+				background: #333;
+				box-sizing: border-box;
+			}
+		.loader{
+			width: 150px;
+			height: 150px;
+			border: 16px solid #f3f3f3;
+		border-radius: 50%;
+		border-top: 16px solid #3498db;
+			position: relative;
+			top: 50px;
+			left: 50px;
+			animation: loader 2s linear infinite;
+			/* 		box-shadow: 0 0 10px #e056fd;
+		*/	}
+		@keyframes loader {
+			0%{
+				transform: rotate(0deg);
+			}
+			100%{
+			
+				filter: hue-rotate(360deg);
+				transform: rotate(360deg);
+			}
+		}
+		.loader-2{
+			width: 120px;
+			height: 120px;
+			position: relative;
+			top: 30%;
+			left: 50%;
+			animation: loaderbg .5s linear infinite;
+		}
+		@keyframes loaderbg{
+			0%{
+				filter: hue-rotate(0);
+			}
+			100%{
+				filter: hue-rotate(360deg);
+			}
+		}
+		.loader-2 span{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			transform: rotate(calc(21deg*var(--i)));
+		}
+		.loader-2 span::before{
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			border-radius: 50%;
+			width: 20px;
+			height: 20px;
+			background: #21f123;
+			box-shadow: 0 0 10px #21f123,0 0 15px #21f123;
+			animation: loader2 1s linear running infinite;
+			animation-delay: calc(.1s*var(--i));
+		}
+		@keyframes loader2 {
+			0%{
+				transform: scale(1);
+			}
+			100%{
+				transform: scale(0);
+			}
+		}
+		</style>
+	</head>
+	<body>
+		<div class="loader"></div>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<div class="loader-2">
+			<span style="--i:1"></span>
+			<span style="--i:2"></span>
+			<span style="--i:3"></span>
+			<span style="--i:4"></span>
+			<span style="--i:5"></span>
+			<span style="--i:6"></span>
+			<span style="--i:7"></span>
+			<span style="--i:8"></span>
+			<span style="--i:9"></span>
+			<span style="--i:10"></span>
+			<span style="--i:11"></span>
+			<span style="--i:12"></span>
+			<span style="--i:13"></span>
+			<span style="--i:14"></span>
+			<span style="--i:15"></span>
+			<span style="--i:16"></span>
+			<span style="--i:17"></span>
+		</div>
+	</body>
+</html>
